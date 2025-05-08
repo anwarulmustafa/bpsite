@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Your Brand Protection Company - Jeddah, Saudi Arabia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Refined styling to more closely match the cakap design */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafa;
+            color: #2d3748;
+        }
+
+        .hero {
+            background-color: #f0f4f8;
+            padding: 150px 0 100px 0;
+            text-align: center;
+            position: relative; /* To position the image shape */
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: #1a52e5;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #4a5568;
+        }
+
+        .hero .btn-primary {
+            background-color: #1a52e5;
+            border-color: #1a52e5;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn-primary:hover {
+            background-color: #123d96;
+            border-color: #123d96;
+            transform: translateY(-2px);
+        }
+
+        .hero .btn-outline-primary {
+            border-color: #1a52e5;
+            color: #1a52e5;
+            background-color: transparent;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn-outline-primary:hover {
+            background-color: rgba(26, 82, 229, 0.1);
+            color: #1a52e5;
+            transform: translateY(-2px);
+        }
+
+        .services-section,
+        .why-choose-us,
+        .testimonials {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .services-section h2,
+        .why-choose-us h2,
+        .testimonials h2 {
+            color: #1a52e5;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .service-item,
+        .benefit-item {
+            background-color: #fff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .service-item:hover,
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3,
+        .benefit-item h3 {
+            color: #1a52e5;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .service-item p,
+        .benefit-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .testimonial-item {
+            background-color: #f7fafc;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            border: 1px solid #edf2f7;
+        }
+
+        .testimonial-item blockquote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            border-left: 3px solid #1a52e5;
+            padding-left: 20px;
+            color: #4a5568;
+            font-style: italic;
+        }
+
+        .testimonial-item p {
+            font-size: 1rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .footer {
+            background-color: #2d3748;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid #4a5568;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: #a0aec0;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            color: #a0aec0;
+            margin-bottom: 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4a5568;
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #1a52e5;
+            transform: translateY(-2px);
+        }
+
+        /* Fixed menu styles */
+        .fixed-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .fixed-menu.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .fixed-menu .nav-link {
+            color: #2d3748;
+            font-size: 1rem;  /* Reduced font size */
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .fixed-menu .nav-link:hover,
+        .fixed-menu .nav-link.active {
+            color: #1a52e5;
+        }
+
+        .fixed-menu .navbar-brand {
+            color: #1a52e5;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 30px;
+            text-decoration: none;
+        }
+        .navbar-toggler{
+          border: none;
+          padding: 0.25rem 0.5rem;
+          line-height: 1.5;
+          border-radius: 0.3rem;
+          transition: box-shadow 0.15s ease-in-out;
+        }
+        .navbar-toggler:focus {
+          box-shadow: 0 0 0 0.2rem rgba(26, 82, 229, 0.25);
+        }
+
+        /* Image holder styles */
+        .img-holder {
+            width: 100%;
+            height: 250px; /* Adjust as needed */
+            background-color: #f0f0f0; /* Placeholder color */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-size: 1.2rem;
+            border: 2px dashed #d3d3d3;
+        }
+        .img-holder img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        .rounded-box {
+            border-radius: 12px;
+            background-color: #e2e8f0; /* Light gray background */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .text-box{
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+
+        /* Image shape  */
+        .hero-image-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; /* Adjust size as needed */
+            height: 300px;
+            border-radius: 50%;
+            background-color: #1a52e5; /* Shape color */
+            opacity: 0.1; /* Adjust opacity as needed */
+            z-index: 1;
+        }
+
+        .hero-image-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px; /* Should be slightly smaller than the shape */
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="fixed-menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Your Brand Protection</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#our-story">Our Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#executive-insight">Executive Insight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#our-strategic-framework">Our Strategic Framework</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#domain-expertise">Domain Expertise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#what-we-offer">What We Offer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Safeguarding Your Brand in the Saudi Market</h1>
+            <p>Comprehensive solutions to combat counterfeiting, infringement, and gray market activities in Saudi Arabia.</p>
+            <button class="btn btn-primary btn-lg">Learn More About Our Services</button>
+            <button class="btn btn-outline-primary btn-lg ml-3">Request a Free Consultation</button>
+             <div class="hero-image-shape"></div>
+            <div class="hero-image-container">
+                <img src="https://placehold.co/400x400/EEE/31343C" alt="Brand Protection">
+            </div>
+        </div>
+    </section>
+
+    <section id="our-story" class="services-section bg-light">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="img-holder">
+                      <img src="https://placehold.co/600x400/EEE/31343C" alt="Our Story">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-box">
+                    <p>
+                        We are a leading brand protection company based in Jeddah, Saudi Arabia, dedicated to safeguarding the intellectual property and brand reputation of businesses operating in this dynamic market. With a deep understanding of the local legal landscape and the challenges posed by counterfeiting, infringement, and gray market activities, we provide tailored solutions to meet the unique needs of our clients.\n
+                    </p>
+                    <p>
+                       Our team comprises experienced lawyers, investigators, and brand protection specialists with a proven track record of success. We combine global best practices with in-depth local knowledge to deliver effective and results-oriented outcomes.\n
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="executive-insight" class="why-choose-us">
+        <div class="container">
+            <h2>Executive Insight</h2>
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <div class="text-box">
+                    <p>
+                        In today's interconnected world, brand protection is more critical than ever.  Companies face a growing number of threats that can erode brand value, damage reputation, and impact the bottom line.  We understand these challenges and are committed to providing our clients with the strategic guidance and practical support they need to protect their most valuable assets.
+                    </p>
+                    <p>
+                        Our approach is proactive, collaborative, and results-driven. We work closely with our clients to understand their specific needs and develop customized solutions that address their unique challenges.  We are passionate about helping businesses thrive in Saudi Arabia by ensuring their brands are secure and their intellectual property is protected.
+                    </p>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-holder">
+                      <img src="https://placehold.co/600x400/EEE/31343C" alt="Executive Insight">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-strategic-framework" class="testimonials bg-light">
+        <div class="container">
+            <h2>Our Strategic Framework</h2>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                  <div class="rounded-box">
+                    <p>
+                        We employ a comprehensive strategic framework that encompasses the following key pillars:
+                    </p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Prevention:</strong> We work with our clients to implement proactive measures to deter counterfeiting and infringement before they occur.</li>
+                        <li class="list-group-item"><strong>Detection:</strong> We utilize cutting-edge technology and investigative techniques to identify and monitor potential threats to our clients' brands.</li>
+                        <li class="list-group-item"><strong>Enforcement:</strong> We take swift and decisive action to enforce our clients' intellectual property rights and stop infringing activities.</li>
+                        <li class="list-group-item"><strong>Collaboration:</strong> We collaborate with law enforcement agencies, customs authorities, and other stakeholders to maximize the effectiveness of our brand protection efforts.</li>
+                        <li class="list-group-item"><strong>Education:</strong> We educate our clients and their stakeholders about the importance of brand protection and provide training on how to identify and combat counterfeiting.</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="domain-expertise" class="services-section">
+      <div class="container">
+        <h2>Domain Expertise</h2>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="text-box">
+                  <p>
+                    We possess in-depth knowledge and expertise in a wide range of industries, including:
+                  </p>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Automotive</li>
+                      <li class="list-group-item">Consumer Electronics</li>
+                      <li class="list-group-item">Fashion and Apparel</li>
+                      <li class="list-group-item">Pharmaceuticals</li>
+                      <li class="list-group-item">Food and Beverage</li>
+                      <li class="list-group-item">Luxury Goods</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img-holder">
+                  <img src="https://placehold.co/600x400/EEE/31343C" alt="Domain Expertise">
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-we-offer"  class="why-choose-us bg-light">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-shield-alt fa-2x text-blue mb-3"></i>
+                        <h3>Anti-Counterfeiting Strategies</h3>
+                        <p>Develop and implement proactive strategies to prevent the manufacture and distribution of counterfeit goods, protecting your brand's authenticity and reputation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-gavel fa-2x text-blue mb-3"></i>
+                        <h3>Intellectual Property Enforcement</h3>
+                        <p>Aggressively pursue legal action against infringers, including litigation, raids, and customs seizures, to defend your intellectual property rights.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-search fa-2x text-blue mb-3"></i>
+                        <h3>Online Brand Protection</h3>
+                        <p>Utilize advanced monitoring and enforcement techniques to detect and remove counterfeit products and infringing content from online marketplaces and social media platforms.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-truck fa-2x text-blue mb-3"></i>
+                        <h3>Gray Market Investigations</h3>
+                        <p>Investigate the source and distribution of gray market goods to help you control pricing, protect authorized channels, and maintain brand integrity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fas fa-file-signature fa-2x text-blue mb-3"></i>
+                        <h3>Customs Recordation</h3>
+                        <p>Register your trademarks and copyrights with Saudi customs authorities to prevent the importation of counterfeit goods at the border.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                       <i class="fas fa-chalkboard-teacher fa-2x text-blue mb-3"></i>
+                        <h3>Training and Awareness</h3>
+                        <p>Provide training and educational programs to your staff and partners to help them identify and combat counterfeit products effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="testimonials">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row mt-5">
+                <div class="col-md-8 offset-md-2">
+                    <div class="rounded-box">
+                      <p>
+                        Get in touch with us today to discuss how we can help you protect your brand in Saudi Arabia.
+                    </p>
+                    <p>
+                        <strong>Address:</strong> [Your Company Address in Jeddah]
+                    </p>
+                    <p>
+                        <strong>Phone:</strong> [Your Company Phone Number]
+                    </p>
+                    <p>
+                        <strong>Email:</strong> [Your Company Email Address]
+                    </p>
+                  </div>
+                    <a href="#" class="btn btn-primary btn-lg">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2025 Your Brand Protection Company - Jeddah, Saudi Arabia</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navigation links
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 800);
+                }
+            });
+
+            // Fixed menu on scroll
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.fixed-menu').addClass('scrolled');
+                } else {
+                    $('.fixed-menu').removeClass('scrolled');
+                }
+            });
+
+            // Add active class to nav links on scroll
+            $(window).scroll(function() {
+                var scrollPos = $(document).scrollTop();
+                $('.nav-link').each(function() {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.nav-link').removeClass("active");
+                        currLink.addClass("active");
+                    } else {
+                        currLink.removeClass("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
