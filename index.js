@@ -31,10 +31,9 @@ app.get('/contact',(req, res)=>{
 
 
 //start the server and listen at port
-
 app.listen(PORT, ()=>{
 
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`🚀 Server running at ${PORT}`);
 });
 
 
